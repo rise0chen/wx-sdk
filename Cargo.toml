@@ -15,23 +15,23 @@ categories = ["api-bindings"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
 default = ["mp"]
-mp = ["roxmltree", "exile", "sha-1", "block-modes", "aes"]
+mp = ["roxmltree", "exile", "sha1", "block-modes", "aes"]
 pay = []
 wxa = []
 
 [dependencies]
 url = { version = "2.2", default-features = false}
-reqwest = { version = "0.11", default-features = false, features = ["json", "multipart"]}
+reqwest = { version = "0.12", default-features = false, features = ["json", "multipart"]}
 serde = { version = "1.0", default-features = false, features = ["derive"] }
 serde_derive = { version = "1.0", default-features = false}
 serde_json = { version = "1.0", default-features = false, features = ["alloc"]}
-thiserror = { version = "1.0", default-features = false}
+thiserror = { version = "2.0", default-features = false}
 async-lock = { version = "3.3", default-features = false}
 async-trait = { version = "0.1", default-features = false}
 roxmltree = { version = "0.19", default-features = false, features=["std"], optional = true}
 exile = { version = "0.0", default-features = false, optional = true}
 rand = { version = "0.8", default-features = false, features = ["std", "std_rng"] }
-sha-1 = { version = "0.9", default-features = false, optional = true}
+sha1 = { version = "0.10", default-features = false, optional = true}
 block-modes = { version = "0.8", default-features = false, features=["alloc"], optional = true}
 aes = { version = "0.7", default-features = false, optional = true}
 
